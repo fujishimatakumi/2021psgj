@@ -33,7 +33,7 @@ public class BackGroundManager : MonoBehaviour
         if (_isMove)
         {
             _score += _scoreMag;
-            _text.text = "" + string.Format("{0,0:D6}", (int)_score);
+            _text.text = "Score:" + string.Format("{0,6}", (int)_score);
         }
 
         _nowYFront = _nowMoveObject.transform.position.y - (_nowMoveObject.transform.localScale.y / 2);
