@@ -5,12 +5,9 @@ using UnityEngine;
 public class ObjectAction : MonoBehaviour
 {
     [SerializeField] float decreacetime = 5f;
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void DecreaceTime(GameManager gameManager)
     {
-        if (collision.CompareTag("Player"))
-        {
-            GameManager gamemanager = FindObjectOfType<GameManager>();
-            gamemanager.DecreaceTimer(decreacetime);
-        }
+        gameManager.DecreaceTimer(decreacetime);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BackGroundManager : MonoBehaviour
 {
@@ -15,9 +16,10 @@ public class BackGroundManager : MonoBehaviour
     int _index;
     [SerializeField] float _scoreMag;
 
+    [SerializeField] Text _text;
     float _score;
     public float Score => _score;
-    bool _isMove;
+    [SerializeField] bool _isMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class BackGroundManager : MonoBehaviour
         if (_isMove)
         {
             _score += _scoreMag;
+            _text.text = "" + string.Format("{0,0:D6}", (int)_score);
         }
 
         _nowYFront = _nowMoveObject.transform.position.y - (_nowMoveObject.transform.localScale.y / 2);
