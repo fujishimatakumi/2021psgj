@@ -43,7 +43,7 @@ public class PlayerMouseController : MonoBehaviour
             IAction action = collision.gameObject.GetComponent<IAction>();
             if (action == null) return;
 
-            action.Action();
+            action.Action(m_gameManager);
             action.Inactivate();
 
             PlaySound(m_getItemSound);
