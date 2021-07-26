@@ -78,4 +78,13 @@ public class BackGroundManager : MonoBehaviour
     {
         _isMove = true;
     }
+
+    public void ChangeSpeedObject()
+    {
+        foreach (var item in _stages)
+        {
+            ObjectSclole os = item.GetComponent<ObjectSclole>();
+            os.ChangeSpeed();
+        }
+    }
 }
