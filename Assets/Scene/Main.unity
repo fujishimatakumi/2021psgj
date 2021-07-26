@@ -602,6 +602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 4360400217978002301, guid: 8bc281ce52b842845952b0aa11233a36,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bc281ce52b842845952b0aa11233a36, type: 3}
 --- !u!1001 &2638478233084734285
@@ -611,11 +616,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 226338735974034270, guid: f01ae61ef02153a44a6c31a86407af81,
-        type: 3}
-      propertyPath: _stages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 226338735974034270, guid: f01ae61ef02153a44a6c31a86407af81,
         type: 3}
       propertyPath: _stages.Array.data[0]
@@ -628,8 +628,8 @@ PrefabInstance:
       objectReference: {fileID: 1051232999}
     - target: {fileID: 226338735974034270, guid: f01ae61ef02153a44a6c31a86407af81,
         type: 3}
-      propertyPath: _nextPos.y
-      value: 10
+      propertyPath: _scoreMag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3846693862251093096, guid: f01ae61ef02153a44a6c31a86407af81,
         type: 3}
@@ -695,16 +695,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3846693862251093099, guid: f01ae61ef02153a44a6c31a86407af81,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3846693862251093099, guid: f01ae61ef02153a44a6c31a86407af81,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01ae61ef02153a44a6c31a86407af81, type: 3}
