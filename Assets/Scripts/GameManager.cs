@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     enum State
     {
-        CountUp,
+        CountDown,
         Stop,
         Finish,
     }
@@ -17,7 +18,10 @@ public class GameManager : MonoBehaviour
     /// ゲームの状態
     /// </summary>
     [SerializeField] State m_state = State.Stop;
-
+    /// <summary>
+    /// タイマーのゲージのイメージ
+    /// </summary>
+    [SerializeField] Image m_timerGageImg;
     /// <summary>
     /// 制限時間
     /// </summary>
@@ -34,16 +38,26 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (m_state == State.CountUp)
+        if (m_state == State.CountDown)
         {
-            m_timer -= Time.deltaTime;
-            Debug.Log((int)m_timer);
-            
-            //タイマーが0になったら終了する
-            if (m_timer <= 0)
-            {
-                CountFinish();
-            }
+            CountDown();
+        }
+    }
+    
+    /// <summary>
+    /// カウントダウンする
+    /// </summary>
+    void CountDown()
+    {
+        m_timer -= Time.deltaTime;
+
+        //タイマーゲージを減らす
+        m_timerGageImg.fillAmount = m_timer / m_limitTime;
+
+        //タイマーが0になったら終了する
+        if (m_timer <= 0)
+        {
+            CountFinish();
         }
     }
 
@@ -52,7 +66,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void CountStart()
     {
-        m_state = State.CountUp;
+        m_state = State.CountDown;
     }
 
     /// <summary>
