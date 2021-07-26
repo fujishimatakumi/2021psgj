@@ -6,12 +6,14 @@ public class PlayerMouseController : MonoBehaviour
 {
     private Vector3 pos;
     private Vector3 WorldPointPos;
+    [SerializeField] AudioClip m_audioClip;
+    AudioSource m_audioSource;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,13 @@ public class PlayerMouseController : MonoBehaviour
 
             action.Action();
             action.Inactivate();
+
+            PlaySound();
         }
+    }
+
+    void PlaySound()
+    {
+        m_audioSource.PlayOneShot(m_audioClip);
     }
 }
