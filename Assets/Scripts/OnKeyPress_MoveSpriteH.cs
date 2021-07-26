@@ -33,8 +33,10 @@ public class OnKeyPress_MoveSpriteH : MonoBehaviour
         if (collision.gameObject.tag == "Item") // "Item"とtag付けした目標オブジェクトに衝突したら
         {
             IAction action = collision.gameObject.GetComponent<IAction>();
-            if (action != null)
-                action.Action();
+            if (action == null) return;
+
+            action.Action();
+            action.Inactivate();
         }
     }
 }

@@ -28,4 +28,9 @@ public class AddTimeItem : MonoBehaviour, IAction
             m_gameManager.Timer += m_gameManager.LinmitTime - m_gameManager.Timer;
         }
     }
+
+    public void Inactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }
