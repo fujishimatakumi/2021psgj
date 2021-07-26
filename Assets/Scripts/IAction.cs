@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IAction 
 {
-    public void Action();
+    void Action();
 }
