@@ -5,7 +5,7 @@ using UnityEngine;
 // キーを押すと、スプライトが移動する（水平に）
 public class OnKeyPress_MoveSpriteH : MonoBehaviour
 {
-
+    [SerializeField] GameManager m_sgameManager;
     public float speed = 0.7f; // スピード：Inspectorで指定
 
     private float vx = 0f;
@@ -35,7 +35,7 @@ public class OnKeyPress_MoveSpriteH : MonoBehaviour
             IAction action = collision.gameObject.GetComponent<IAction>();
             if (action == null) return;
 
-            action.Action();
+            action.Action(m_sgameManager);
             action.Inactivate();
         }
     }

@@ -7,25 +7,24 @@ using UnityEngine;
 /// </summary>
 public class AddTimeItem : MonoBehaviour, IAction
 {
-    [SerializeField] GameManager m_gameManager;
     /// <summary>
     /// 加算される時間
     /// </summary>
     [SerializeField] float m_addTime;
 
-    public void Action()
+    public void Action(GameManager gameManager)
     {
         //加算された時、制限時間を超えなかったら
-        if (m_gameManager.Timer + m_addTime <= m_gameManager.LinmitTime)
+        if (gameManager.Timer + m_addTime <= gameManager.LinmitTime)
         {
             //普通に時間を加算させる
-            m_gameManager.Timer += m_addTime;
+            gameManager.Timer += m_addTime;
         }
         //加算された時、制限時間を超えたら
         else
         {
             //制限時間より多くならないように加算させる
-            m_gameManager.Timer += m_gameManager.LinmitTime - m_gameManager.Timer;
+            gameManager.Timer += gameManager.LinmitTime - gameManager.Timer;
         }
     }
 
