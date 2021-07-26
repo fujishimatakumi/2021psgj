@@ -21,5 +21,6 @@ public class ObjectSclole : MonoBehaviour
     public void ChangeSpeed()
     {
         _scloleSpeed = _speedData.Speed;
+        Debug.Log(_scloleSpeed);
     }
 }
