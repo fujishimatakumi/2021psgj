@@ -36,7 +36,11 @@ public class PlayerMouseController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Item") // "Item"とtag付けした目標オブジェクトに衝突したら
         {
-            Debug.Log("当たった");
+            IAction action = collision.gameObject.GetComponent<IAction>();
+            if (action == null) return;
+
+            action.Action();
+            action.Inactivate();
         }
     }
 }
