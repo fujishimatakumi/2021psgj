@@ -5,13 +5,10 @@ using UnityEngine;
 /// <summary>
 /// アイテム
 /// </summary>
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IAction
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Action()
     {
-        if (collision.CompareTag("Player"))
-        {
-            Debug.Log("アイテムにあったった");
-        }
+        throw new System.NotImplementedException();
     }
 }
