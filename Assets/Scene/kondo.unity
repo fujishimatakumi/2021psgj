@@ -204,6 +204,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &264520173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 185574501071238219, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_Name
+      value: AddTimeItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 185574501071238231, guid: 347d45da5c558af46940d663d15536b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 347d45da5c558af46940d663d15536b4, type: 3}
+--- !u!114 &465302469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2098155095621452968, guid: 99199bca75940274eb80e83e9015ab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 4629875210498677125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &550436299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,8 +351,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_timerGageImg
       value: 
-      objectReference: {fileID: 6905260569942983246, guid: 138692f486e90584b9abc91ef49b01ff,
-        type: 3}
+      objectReference: {fileID: 465302469}
     - target: {fileID: 9125155272382718102, guid: a68e9abcab34b36418d0e3296fdbb3bd,
         type: 3}
       propertyPath: m_state
@@ -376,7 +456,7 @@ RectTransform:
   m_Children:
   - {fileID: 3102246158939566091}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -447,7 +527,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &3102246158939566091 stripped
 RectTransform:

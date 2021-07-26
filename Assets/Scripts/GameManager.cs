@@ -27,13 +27,17 @@ public class GameManager : MonoBehaviour
     /// </summary>
     [SerializeField] float m_limitTime = 30;
     /// <summary>
+    /// 制限時間
+    /// </summary>
+    public float LinmitTime{ get { return m_limitTime; } private set { } }
+    /// <summary>
     /// タイマー
     /// </summary>
-    float m_timer = 0;
+    public float Timer = 0;
 
     private void Start()
     {
-        m_timer = m_limitTime;
+        Timer = m_limitTime;
     }
 
     private void Update()
@@ -49,13 +53,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void CountDown()
     {
-        m_timer -= Time.deltaTime;
+        Timer -= Time.deltaTime;
 
         //タイマーゲージを減らす
-        m_timerGageImg.fillAmount = m_timer / m_limitTime;
+        m_timerGageImg.fillAmount = Timer / m_limitTime;
 
         //タイマーが0になったら終了する
-        if (m_timer <= 0)
+        if (Timer <= 0)
         {
             CountFinish();
         }
