@@ -23,4 +23,11 @@ public class OnKeyPress_MoveSpriteH : MonoBehaviour {
     void FixedUpdate() { // ずっと行う（一定時間ごとに）
         this.transform.Translate(vx / 50f, vy / 50f, 0);
     }
+    void OnTriggerEnter2D(Collider2D collision) // 衝突したとき
+    {
+        if (collision.gameObject.tag == "Item") // "Item"とtag付けした目標オブジェクトに衝突したら
+        {
+            Debug.Log("当たった");
+        }
+    }
 }

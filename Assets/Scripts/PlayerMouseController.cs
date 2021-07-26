@@ -31,4 +31,12 @@ public class PlayerMouseController : MonoBehaviour
 
         
     }
+
+    void OnTriggerEnter2D(Collider2D collision) // 衝突したとき
+    {
+        if (collision.gameObject.tag == "Item") // "Item"とtag付けした目標オブジェクトに衝突したら
+        {
+            Debug.Log("当たった");
+        }
+    }
 }
