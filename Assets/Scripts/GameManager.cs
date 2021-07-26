@@ -88,4 +88,9 @@ public class GameManager : MonoBehaviour
     {
         m_state = State.Finish;
     }
+
+    public void DecreaceTimer(int time)
+    {
+        Timer -= time;
+    }
 }
