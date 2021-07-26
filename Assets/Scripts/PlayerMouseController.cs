@@ -6,7 +6,9 @@ public class PlayerMouseController : MonoBehaviour
 {
     private Vector3 pos;
     private Vector3 WorldPointPos;
-    [SerializeField] AudioClip m_audioClip;
+    [SerializeField] AudioClip m_getItemSound;
+    [SerializeField] AudioClip m_damageSound;
+    [SerializeField] GameManager m_gameManager;
     AudioSource m_audioSource;
 
 
@@ -36,7 +38,7 @@ public class PlayerMouseController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) // 衝突したとき
     {
-        if (collision.gameObject.tag == "Item") // "Item"とtag付けした目標オブジェクトに衝突したら
+        if (collision.gameObject.CompareTag("Item")) // "Item"とtag付けした目標オブジェクトに衝突したら
         {
             IAction action = collision.gameObject.GetComponent<IAction>();
             if (action == null) return;
@@ -44,12 +46,19 @@ public class PlayerMouseController : MonoBehaviour
             action.Action();
             action.Inactivate();
 
-            PlaySound();
+            PlaySound(m_getItemSound);
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            ObjectAction objectAction = collision.GetComponent<ObjectAction>();
+            objectAction.DecreaceTime(m_gameManager);
+            PlaySound(m_damageSound);
         }
     }
 
-    void PlaySound()
+    public void PlaySound(AudioClip audioClip)
     {
-        m_audioSource.PlayOneShot(m_audioClip);
+        m_audioSource.PlayOneShot(audioClip);
     }
 }
