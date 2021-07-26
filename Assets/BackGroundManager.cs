@@ -14,6 +14,7 @@ public class BackGroundManager : MonoBehaviour
     float _nowYFront;
     float _nowYEnd;
     int _index;
+    [SerializeField] float _delay = 6f;
     [SerializeField] float _scoreMag;
 
     [SerializeField] Text _text;
@@ -69,7 +70,7 @@ public class BackGroundManager : MonoBehaviour
 
     IEnumerator DestoryDelay(GameObject obj)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(_delay);
         Destroy(obj);
     }
 

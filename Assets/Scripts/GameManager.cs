@@ -34,9 +34,10 @@ public class GameManager : MonoBehaviour
     /// タイマー
     /// </summary>
     public float Timer = 0;
-
+    [SerializeField] GameObject _gameOverText;
     private void Start()
     {
+        _gameOverText.SetActive(false);
         Timer = m_limitTime;
     }
 
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
     void CountFinish()
     {
         m_state = State.Finish;
+        _gameOverText.SetActive(true);
     }
 
     public void DecreaceTimer(float time)

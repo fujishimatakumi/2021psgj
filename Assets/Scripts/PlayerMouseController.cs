@@ -16,6 +16,7 @@ public class PlayerMouseController : MonoBehaviour
     void Start()
     {
         m_audioSource = GetComponent<AudioSource>();
+        StartCoroutine(Rotate());
     }
 
     // Update is called once per frame
@@ -60,5 +61,14 @@ public class PlayerMouseController : MonoBehaviour
     public void PlaySound(AudioClip audioClip)
     {
         m_audioSource.PlayOneShot(audioClip);
+    }
+
+    IEnumerator Rotate()
+    {
+        while (true)
+        {
+            this.gameObject.transform.Rotate(Vector3.forward);
+            yield return null;
+        }
     }
 }
