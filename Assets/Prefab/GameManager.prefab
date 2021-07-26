@@ -60,7 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4121a8bd64c5b054bbb148c051c38b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stages: []
+  _stages:
+  - {fileID: 0}
+  - {fileID: 0}
   _startPos: {x: 0, y: 0, z: 0}
-  _nextPos: {x: 0, y: 0, z: 0}
+  _nextPos: {x: 0, y: 10, z: 0}
   _scoreMag: 0
